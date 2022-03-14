@@ -1,0 +1,47 @@
+
+
+<form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div class="card">
+     <h2 class="a">Login Form</h2><br>
+  <label for="first-name">First Name: </label>
+  <input id="first-name" type="text" formControlName="firstName"> <br><br>
+
+  <label for="last-name">Last Name: </label>
+  <input id="last-name" type="text" formControlName="lastName"><br><br>
+
+
+
+  <div formGroupName="address">
+
+    <label for="street">Street: </label>
+    <input id="street" type="text" formControlName="street">
+<br><br>
+    <label for="city" mt-3>City:  </label>
+    <input id="city" type="text" formControlName="city">
+<br><br>
+    <label for="state">State: </label>
+    <input id="state" type="text" formControlName="state">
+<br><br>
+    <label for="zip">Zip Code: </label>
+    <input id="zip" type="text" formControlName="pin">
+  </div>
+  <div formArrayName="aliases">
+  <p>addFields</p>
+  <button type="button" (click)="addAlias()">+ Add another alias</button>
+
+  <div *ngFor="let alias of addField.controls; let i=index">
+    <!-- The repeated alias template -->
+    <label class="c" for="alias-{{ i }}">addFields:</label>
+    <input id="alias-{{ i }}" type="text" [formControlName]="i">
+  </div>
+</div>
+  <p>Complete the form to enable button.</p>
+  <button type="submit" [disabled]="!loginform.valid">Submit</button>
+  <button class="b"  type="button" (click)="updateProfile()">Update Profile</button>
+
+
+</div></div>
+</form>
+
+

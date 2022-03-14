@@ -1,0 +1,40 @@
+
+.card
+{
+  text-align: left;
+display:block;
+padding: 20px;
+margin-top: 3%;
+width: 450px;
+left: 50%;
+position:50%;
+  border: 2px solid black ;
+
+}
+.b{
+ position: relative;
+ left:250px;
+}
+label{
+  display: inline-block;
+        width: 100px;
+        text-align: left;
+        padding: 5px;
+}
+.c{
+  text-align: left;
+}
+
+input[type=text] {
+  text-align: center;
+}
+h2{
+text-align: center;
+}
+
+.a{
+align-items: center;
+}
+input[type=text]{
+  align-items:flex-end;
+}
